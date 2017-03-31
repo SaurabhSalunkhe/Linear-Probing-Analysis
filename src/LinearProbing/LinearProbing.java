@@ -123,27 +123,27 @@ class HashMap {
     }
 
    
-    public void insertNewTable(int key, int value) {
-        int hash = (key % table.length);
-        int initialHash = -1;
-        while (hash != initialHash
-                && (table[hash] != null && table[hash].getKey() != key)) {
-
-            if (initialHash == -1) {
-                initialHash = hash;
-            }
-
-            hash = (hash + 1) % table.length;
-        }
-        if (initialHash != hash) {
-            if (table[hash] != null && table[hash].getKey() == key) {
-                table[hash].setValue(value);
-            } else {
-                table[hash] = new HashEntry(key, value);
-                size++;
-            }
-        }
-    }
+//    public void insertNewTable(int key, int value) {
+//        int hash = (key % table.length);
+//        int initialHash = -1;
+//        while (hash != initialHash
+//                && (table[hash] != null && table[hash].getKey() != key)) {
+//
+//            if (initialHash == -1) {
+//                initialHash = hash;
+//            }
+//
+//            hash = (hash + 1) % table.length;
+//        }
+//        if (initialHash != hash) {
+//            if (table[hash] != null && table[hash].getKey() == key) {
+//                table[hash].setValue(value);
+//            } else {
+//                table[hash] = new HashEntry(key, value);
+//                size++;
+//            }
+//        }
+//    }
 
     public void displayTable() {
         System.out.println("Table: ");
